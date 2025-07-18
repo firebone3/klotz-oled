@@ -62,4 +62,9 @@
 		sensors = <&left_encoder &right_encoder>;
 		triggers-per-rotation = <24>;
 	};
+
+	&ec11_0 { // 엔코더의 node-label에 따라 이름이 다를 수 있습니다.
+  	  compatible = "alps,ec11";
+   	 status = "okay"; 
+	};
 };
