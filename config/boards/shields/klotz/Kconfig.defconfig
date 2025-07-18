@@ -1,0 +1,32 @@
+if SHIELD_KLOTZ_DONGLE
+
+config ZMK_KEYBOARD_NAME
+    default "KLOTZ"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+config ZMK_USB
+    default y
+
+endif
+
+if SHIELD_KLOTZ_LEFT || SHIELD_KLOTZ_RIGHT || SHIELD_KLOTZ_DONGLE
+
+config ZMK_SPLIT
+    default y
+
+config ZMK_BLE
+    default y
+
+endif
+
+if ZMK_BACKLIGHT
+
+    config PWM
+        default y
+
+    config LED_PWM
+        default y
+
+endif # ZMK_BACKLIGHT
